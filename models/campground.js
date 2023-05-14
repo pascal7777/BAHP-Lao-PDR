@@ -32,7 +32,7 @@ const CampgroundSchema = new Schema(
         required: true,
       },
     },
-    Investment (US$): Number,
+    investment: Number,
   
     
     description: String,
