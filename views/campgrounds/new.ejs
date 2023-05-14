@@ -1,6 +1,6 @@
 <% layout('layouts/boilerplate')%>
 <div class="row">
-  <h1 class="text-center">New Site</h1>
+  <h1 class="text-center">New Project Site</h1>
 
   <div class="col-md-6 offset-md-3">
     <form
@@ -11,7 +11,7 @@
       enctype="multipart/form-data"
     >
       <div class="mb-3">
-        <label class="form-label" for="title">Name of Site</label>
+        <label class="form-label" for="title">Name of Project Site</label>
         <input
           class="form-control"
           type="text"
@@ -41,42 +41,9 @@
                     Looks good!
                 </div>
             </div> -->
-      <div class="mb-1">
-        <label class="form-label" for="price">Entry fee (pp)</label>
-        <div class="input-group">
-          <span class="input-group-text" id="price-label">LAK</span>
-          <input
-            type="text"
-            class="form-control"
-            id="price"
-            placeholder="0.00"
-            aria-label="price"
-            aria-describedby="price-label"
-            name="campground[price]"
-            required
-          />
-        </div>
-        <div class="valid-feedback">Looks good!</div>
-      </div>
+      
 
-      <div class="mb-1">
-        <label class="form-label" for="overnigth_price"
-          >Overnight Price (pp)</label
-        >
-        <div class="input-group">
-          <span class="input-group-text" id="overnigth_price-label">LAK</span>
-          <input
-            type="text"
-            class="form-control"
-            id="overnigth_price"
-            placeholder="0.00"
-            aria-label="overnigth_price"
-            aria-describedby="overnigth_price-label"
-            name="campground[overnigth_price]"
-          />
-        </div>
-        <div class="valid-feedback">Looks good!</div>
-      </div>
+  
 
       <div class="mb-3">
         <label class="form-label" for="description">Description</label>
@@ -110,6 +77,6 @@
         <button class="btn btn-success">Add this Site</button>
       </div>
     </form>
-    <a href="/campgrounds">All Campgrounds</a>
+    <a href="/campgrounds">Back to Project Sites list</a>
   </div>
 </div>
