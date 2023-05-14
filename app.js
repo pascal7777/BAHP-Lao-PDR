@@ -23,7 +23,16 @@ const campgroundRoutes = require('./routes/campgrounds');
 const reviewRoutes = require('./routes/reviews');
 
 // --- oY5crCUHs4GSrUAQ --- username BHAP
-// mongodb+srv://BHAP:<password>@bahp.fedrxjy.mongodb.net/?retryWrites=true&w=majority
+// mongodb+srv://BHAP:oY5crCUHs4GSrUAQ@bahp.fedrxjy.mongodb.net/?retryWrites=true&w=majority
+// Replace <password> with the password for the BHAP user
+
+
+// CLOUDINARY_CLOUD_NAME duwph1blp
+// CLOUDINARY_KEY 858412699173725
+// CLOUDINARY_SECRET bjxtwwfIflhFkLZt-fnTrtSTIyE
+// DB_URL
+// MAPBOX_TOKEN pk.eyJ1IjoicGFzY2FsODg4OCIsImEiOiJjbGNsaHpzMmcwdXlqM3lwY2hoZHVnY3JtIn0.4uFDpMmszElMuhVq_U46hg
+// SECRET ec04eaa94188518a4dc2f217469814c3
 
 const dbURL = process.env.DB_URL || 'mongodb://localhost:27017/bahp';
 const secret = process.env.SECRET || 'squirrel';
