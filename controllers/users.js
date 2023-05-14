@@ -14,7 +14,7 @@ module.exports.createRegistration = async (req, res, next) => {
     const registeredUser = await User.register(user, password);
     req.login(registeredUser, (err) => {
       if (err) return next(err);
-      req.flash("success", "Welcome to Pai Boeng!");
+      req.flash("success", "Welcome to ໂຄງການເພື່ອສຸຂະພາບຂອງປະຊາຊົນເຂດຊາຍແດນ");
       res.redirect("/campgrounds");
     });
   } catch (e) {
