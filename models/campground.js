@@ -32,11 +32,13 @@ const CampgroundSchema = new Schema(
         required: true,
       },
     },
-    price: Number,
-    overnigth_price: Number,
-    default: 0,
+    Investment (US$): Number,
+  
+    
     description: String,
+    
     location: String,
+    
     author: {
       type: Schema.Types.ObjectId,
       ref: "User",
