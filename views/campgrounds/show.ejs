@@ -41,15 +41,12 @@
         <li class="list-group-item text-muted">
           Location: <%= campground.location%>
         </li>
-
-
-
-       
-
-
-
+         <li class="list-group-item text-muted">
+          Project Investment (tentative): <%= campground.investment%>
+        </li>
       </ul>
-      <% if( currentUser && campground.author.equals(currentUser._id)) {%>
+
+<% if( currentUser && campground.author.equals(currentUser._id)) {%>
       <div class="card-body">
         <a
           class="card-link btn btn-info"
