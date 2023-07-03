@@ -6,10 +6,9 @@
 
 
 <div class="d-flex flex-row">
-  <div class="p-4">All Sites (<%=campgrounds.length%>)</div>
+  <div class="p-2">All Sites (<%=campgrounds.length%>)</div>
   <div class="p-2"></div>
-  <div class="p-2"></div>
-  <div class="p-4"> <% if(currentUser){%>
+  <div class="p-2"> <% if(currentUser){%>
        
           <a href="/campgrounds/new" class="p-2 flex-grow-1 bd-highlight"
             >Add a New Site</a>
@@ -18,7 +17,8 @@
             href="/login?returnTo=/campgrounds/new"
             class="p-2 flex-grow-1 bd-highlight"
             >Add a new site</a>
-          <%}%></div>
+          <%}%>
+</div>
 
 
   
