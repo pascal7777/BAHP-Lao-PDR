@@ -39,13 +39,20 @@
       </div>
       <ul class="list-group list-group-flush">
     
-         <li class="list-group-item text-muted">
+         
+<li class="list-group-item text-muted">
           BHAP Scope of Work (Civil Works): <%= campground.scope%> </li>
-    <li class="list-group-item text-muted">
+   
+<li class="list-group-item text-muted">
           Works Start: <%= campground.scope_starty%> <%= campground.scope_startq%>     -      Works End: <%= campground.scope_endy%> <%= campground.scope_endq%></li>
+
   <li class="list-group-item text-muted">BHAP Equipment Support: <%= campground.equipment1%> </li>
+Procurement Start: <%= campground.equipment1_starty%> <%= campground.equipment1_startq%>     -      Scheduled Delivery: <%= campground.equipment1_endy%> <%= campground.equipment1_endq%></li>
+
   <li class="list-group-item text-muted">BHAP Equipment Support: <%= campground.equipment2%> </li>
-  <li class="list-group-item text-muted">BHAP Safeguards: <%= campground.safeguards%> </li>
+Works Start: <%= campground.equipment2_starty%> <%= campground.equipment2_startq%>     -      Works End: <%= campground.equipment2_endy%> <%= campground.equipment2_endq%></li>
+
+<li class="list-group-item text-muted">BHAP Safeguards: <%= campground.safeguards%> </li>
   <li class="list-group-item text-muted">BHAP Gender Action: <%= campground.gender%>
         </li>
       </ul>
@@ -102,7 +109,7 @@
         ></textarea>
         <div class="valid-feedback">Looks good!</div>
       </div>
-      <button class="btn btn-success">Submit Review</button>
+      <button class="btn btn-success">Submit Comment</button>
     </form>
   
     <% } else { %>
