@@ -35,13 +35,14 @@
     <div class="card mb-3">
       <div class="card-body">
         <h5 class="card-title"><%= campground.title%></h5>
-        <p class="card-text"><%= campground.description%></p>
+        <p class="card-text">Site Description: <%= campground.description%></p>
       </div>
       <ul class="list-group list-group-flush">
     
          <li class="list-group-item text-muted">
-          BHAP Scope of Work: <%= campground.scope%> </li>
-  <li class="list-group-item text-muted">BHAP Equipment: <%= campground.equipment%> </li>
+          BHAP Scope of Work (Civil Works): <%= campground.scope%> </li>
+  <li class="list-group-item text-muted">BHAP Equipment Support: <%= campground.equipment1%> </li>
+  <li class="list-group-item text-muted">BHAP Equipment Support: <%= campground.equipment2%> </li>
   <li class="list-group-item text-muted">BHAP Safeguards: <%= campground.safeguards%> </li>
   <li class="list-group-item text-muted">BHAP Gender Action: <%= campground.gender%>
         </li>
