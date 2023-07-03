@@ -6,19 +6,7 @@
 
 
 
-  <div>All Sites (<%=campgrounds.length%>)</div>
- 
-  <div> <% if(currentUser){%>
-       
-          <a href="/campgrounds/new" class="p-2 flex-grow-1 bd-highlight"
-            >Add a New Site</a>
-          <% } else { %>
-          <a
-            href="/login?returnTo=/campgrounds/new"
-            class="p-2 flex-grow-1 bd-highlight"
-            >Add a new site</a>
-          <%}%>
-</div>
+  <h1>All Sites (<%=campgrounds.length%>)</h1>
 
   
 
