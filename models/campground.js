@@ -32,13 +32,13 @@ const CampgroundSchema = new Schema(
         required: true,
       },
     },
-    investment: Number,
-  
-    
-    description: String,
-    
     location: String,
-    
+    description: String,
+    scope: String,
+    equipment: String,
+    safeguards: String,
+    gender: String,
+  
     author: {
       type: Schema.Types.ObjectId,
       ref: "User",
