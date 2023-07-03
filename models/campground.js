@@ -35,7 +35,8 @@ const CampgroundSchema = new Schema(
     location: String,
     description: String,
     scope: String,
-    equipment: String,
+    equipment1: String,
+     equipment2: String,
     safeguards: String,
     gender: String,
   
