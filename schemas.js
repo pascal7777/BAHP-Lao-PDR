@@ -31,6 +31,7 @@ module.exports.campgroundSchema = Joi.object({
     description: Joi.string().required().escapeHTML(),
         situation: Joi.string().required().escapeHTML(),
     scope: Joi.string().escapeHTML(),
+    scope_detail: Joi.string().escapeHTML(),
       scope_starty: Joi.string().escapeHTML(),
       scope_startq: Joi.string().escapeHTML(),
           scope_endy: Joi.string().escapeHTML(),
