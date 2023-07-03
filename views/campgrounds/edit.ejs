@@ -64,15 +64,29 @@
 
 
            <div class="mb-3">
-        <label class="form-label" for="scope">Equipment</label>
+        <label class="form-label" for="equipment1">Equipment (Initial Support)</label>
         <textarea
           class="form-control"
           type="text"
-          id="equipment"
-          name="campground[equipment]"
+          id="equipment1"
+          name="campground[equipment1]"
           required
         >
-<%= campground.equipment%></textarea
+<%= campground.equipment1%></textarea
+        >
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+        <div class="mb-3">
+        <label class="form-label" for="equipment2">Equipment (Follow-up Support)</label>
+        <textarea
+          class="form-control"
+          type="text"
+          id="equipment2"
+          name="campground[equipment2]"
+          required
+        >
+<%= campground.equipment2%></textarea
         >
         <div class="valid-feedback">Looks good!</div>
       </div>
