@@ -34,6 +34,7 @@ const CampgroundSchema = new Schema(
     },
     location: String,
     description: String,
+      cursit: String,
     scope: String,
        scope_starty: String,
     scope_startq: String,
