@@ -29,7 +29,10 @@ module.exports.campgroundSchema = Joi.object({
     title: Joi.string().required().escapeHTML(),
     location: Joi.string().required().escapeHTML(),
     description: Joi.string().required().escapeHTML(),
-    investment: Joi.string().escapeHTML(),
+    scope: Joi.string().escapeHTML(),
+     equipment: Joi.string().escapeHTML(),
+     safeguards: Joi.string().escapeHTML(),
+     gender: Joi.string().escapeHTML(),
   }).required(),
   deleteImages: Joi.array(),
 });
