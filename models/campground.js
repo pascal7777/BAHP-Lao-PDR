@@ -33,6 +33,7 @@ const CampgroundSchema = new Schema(
       },
     },
     location: String,
+     connection: String,
     description: String,
       situation: String,
     scope: String,
