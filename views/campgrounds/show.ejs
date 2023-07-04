@@ -60,7 +60,7 @@
     <div class="card-header" id="headingOneA">
       <h5 class="mb-0">
         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOneA" aria-expanded="true" aria-controls="collapseOneA">
-         Civil Works (Descripton)
+     Infrastructure
         </button>
       </h5>
     </div>
@@ -76,7 +76,7 @@
     <div class="card-header" id="headingOneB">
       <h5 class="mb-0">
         <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOneB" aria-expanded="true" aria-controls="collapseOneB">
-         Civil Works (Details)
+     Works Details
         </button>
       </h5>
     </div>
@@ -85,7 +85,7 @@
       <div class="card-body">
         <%= campground.scope_detail%>
 <br>
-        <%= campground.scope_starty%> <%= campground.scope_startq%>     -      Works End: <%= campground.scope_endy%> <%= campground.scope_endq%>
+      <b>  <%= campground.scope_starty%> <%= campground.scope_startq%>     -      Works End: <%= campground.scope_endy%> <%= campground.scope_endq%></b>
    </ul> 
       </div>
     </div>
@@ -103,11 +103,11 @@
       <div class="card-body">
         <%= campground.equipment1%>
 <br>
-        <%= campground.equipment1_starty%> <%= campground.equipment1_startq%>     -      Scheduled Delivery (initial): <%= campground.equipment1_endy%> <%= campground.equipment1_endq%>
+        <b><%= campground.equipment1_starty%> <%= campground.equipment1_startq%>     -      Scheduled Delivery (initial): <%= campground.equipment1_endy%> <%= campground.equipment1_endq%></b>
 <br>
         <%= campground.equipment2%>
 <br>
-        <%= campground.equipment2_starty%> <%= campground.equipment2_startq%>     -      Scheduled Delivery (follow-up): <%= campground.equipment2_endy%> <%= campground.equipment2_endq%>
+        <b><%= campground.equipment2_starty%> <%= campground.equipment2_startq%>     -      Scheduled Delivery (follow-up): <%= campground.equipment2_endy%> <%= campground.equipment2_endq%></b>
     </div>
   </div>
   <div class="card">
@@ -120,9 +120,9 @@
     </div>
     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
       <div class="card-body">
-       <%= campground.safeguards%>
+      Environmental and Social Safeguards: <%= campground.safeguards%>
 <br>
-       <%= campground.gender%> 
+      Gender issues: <%= campground.gender%> 
       </div>
     </div>
   </div>
