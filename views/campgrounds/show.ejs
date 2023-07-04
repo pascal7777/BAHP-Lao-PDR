@@ -75,12 +75,19 @@
  </div>
 
 <div class="row">
+
 <div class="col-6">
  <ul class="list-group list-group-flush">
    <li class="list-group-item text-muted"><b>BHAP Safeguards:</b> <%= campground.safeguards%> </li>
+ </ul>
+</div> 
+<div class="col-6">
+ <ul class="list-group list-group-flush">
    <li class="list-group-item text-muted"><b>BHAP Gender Action:</b> <%= campground.gender%> </li>
  </ul>
- </div> 
+</div> 
+
+
   <% if( currentUser && campground.author.equals(currentUser._id)) {%>
   <div class="card-body">
         <a class="card-link btn btn-info" href="/campgrounds/<%=campground._id%>/edit">Edit</a>
@@ -89,6 +96,8 @@
         </form>
   </div>
       <% } %>
+
+
 </div>
 
  <% if(currentUser){ %>
