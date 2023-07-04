@@ -92,7 +92,7 @@ Location: <h5><span style="color:grey"><%= campground.connection%></span></h5>
 
     <% if(currentUser){ %>
       <br>
-    <h6>Comment (ຄໍາເຫັນ) :</h6>
+    
     <form
       action="/campgrounds/<%=campground._id%>/reviews"
       method="POST"
@@ -101,7 +101,7 @@ Location: <h5><span style="color:grey"><%= campground.connection%></span></h5>
     >
      
 
-      <div class="mb-3">Comment Text (ຂໍ້ຄວາມສະແດງຄວາມຄິດເຫັນ): </label>
+      <div class="mb-3">Comment (ຂໍ້ຄວາມສະແດງຄວາມຄິດເຫັນ): </label>
         <textarea
           class="form-control"
           name="review[body]"
