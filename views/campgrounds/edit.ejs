@@ -1,301 +1,211 @@
 <% layout('layouts/boilerplate')%>
 <div class="row">
-  <h1 class="text-center">Edit Campground</h1>
-  <div class="col-md-6 offset-md-3">
-    <form
-      action="/campgrounds/<%=campground._id%>?_method=PUT"
-      method="POST"
-      novalidate
-      class="validated-form"
-      enctype="multipart/form-data"
-    >
-      <div class="mb-3">
-        <label class="form-label" for="title">Title</label>
-        <input
-          class="form-control"
-          type="text"
-          id="title"
-          name="campground[title]"
-          value="<%=campground.title %>"
-          required
-        />
-        <div class="valid-feedback">Looks good!</div>
-      </div>
-      <div class="mb-3">
-        <label class="form-label" for="location">Location</label>
-        <input
-          class="form-control"
-          type="text"
-          id="location"
-          name="campground[location]"
-          value="<%=campground.location %>"
-          required
-        />
-        <div class="valid-feedback">Looks good!</div>
-      </div>
-   <div class="mb-3">
-        <label class="form-label" for="connection">Connection</label>
-        <input
-          class="form-control"
-          type="text"
-          id="connection"
-          name="campground[connection]"
-          value="<%=campground.connection %>"
-          required
-        />
-        <div class="valid-feedback">Looks good!</div>
-      </div>
+
+<h1 class="text-center">Edit Site Info</h1>
+<div class="col-md-6 offset-md-3">
+
+<form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+
+<div class="mb-3">
+<label class="form-label" for="title">Title</label>
+<input class="form-control" type="text" id="title" name="campground[title]" value="<%=campground.title %>" required/>
+<div class="valid-feedback">Looks good!</div>
+</div>
+
+<div class="mb-3">
+<label class="form-label" for="location">Location</label>
+<input class="form-control" type="text" id="location" name="campground[location]" value="<%=campground.location %>" required/>
+<div class="valid-feedback">Looks good!</div>
+</div>
+
+<div class="mb-3">
+<label class="form-label" for="connection">Connection</label>
+<input class="form-control" type="text" id="connection" name="campground[connection]" value="<%=campground.connection %>" required/>
+<div class="valid-feedback">Looks good!</div>
+</div>
       
-      <div class="mb-3">
-        <label class="form-label" for="description">Description</label>
-        <textarea
-          class="form-control"
-          type="text"
-          id="description"
-          name="campground[description]"
-          required
-        >
-<%= campground.description%></textarea
-        >
-        <div class="valid-feedback">Looks good!</div>
-      </div>
+<div class="mb-3">
+<label class="form-label" for="description">Description</label>
+<textarea class="form-control" type="text" id="description" name="campground[description]" required>
+<%= campground.description%></textarea>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
 <div class="mb-3">
-        <label class="form-label" for="situation">Current Situation</label>
-        <textarea
-          class="form-control"
-          type="text"
-          id="situation"
-          name="campground[situation]"
-          required
-        >
-<%= campground.situation%></textarea
-        >
-        <div class="valid-feedback">Looks good!</div>
-      </div>
-
-           <div class="mb-3">
-        <label class="form-label" for="scope">Scope of Work</label>
-        <textarea
-          class="form-control"
-          type="text"
-          id="scope"
-          name="campground[scope]"
-          required
-        ><%= campground.scope%></textarea>
-        <div class="valid-feedback">Looks good!</div>
-      </div>
-
-        <div class="mb-3">
-        <label class="form-label" for="scope_detail">Works Details</label>
-        <textarea
-          class="form-control"
-          type="text"
-          id="scope_detail"
-          name="campground[scope_detail]"
-          required
-        ><%= campground.scope_detail%></textarea>
-        <div class="valid-feedback">Looks good!</div>
-      </div>
-
- <div class="mb-3">
-  <label for="scope_starty">Works Start (Year)</label>
-  <select name="campground[scope_starty]" id="scope_starty">
-    <option value="2024">2024</option> <option value="2025">2025</option>   <option value="2026">2026</option> 
-  </select>
-  <div class="valid-feedback">Looks good!</div>
-      </div>
+<label class="form-label" for="situation">Current Situation</label>
+<textarea class="form-control" type="text" id="situation" name="campground[situation]" required>
+<%= campground.situation%></textarea>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
 <div class="mb-3">
-  <label for="scope_startq">Works Start (Quarter)</label>
-  <select name="campground[scope_startq]" id="scope_startq">
-    <option value="Q1">Q1</option> <option value="Q2">Q2</option>   <option value="Q3">Q3</option>  <option value="Q4">Q4</option> 
-  </select>
-  <div class="valid-feedback">Looks good!</div>
-      </div>
-
- <div class="mb-3">
-  <label for="scope_endy">Works End (Year)</label>
-  <select name="campground[scope_endy]" id="scope_endy">
-    <option value="2026">2026</option> <option value="2027">2027</option>   <option value="2028">2028</option> 
-  </select>
-  <div class="valid-feedback">Looks good!</div>
-      </div>
+<label class="form-label" for="scope">Scope of Work</label>
+<textarea class="form-control" type="text" id="scope" name="campground[scope]" required>
+<%= campground.scope%></textarea>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
 <div class="mb-3">
-  <label for="scope_endq">Works End (Quarter)</label>
-  <select name="campground[scope_endq]" id="scope_endq">
-    <option value="Q1">Q1</option> <option value="Q2">Q2</option>   <option value="Q3">Q3</option>  <option value="Q4">Q4</option> 
-  </select>
-  <div class="valid-feedback">Looks good!</div>
-      </div>
-
-           <div class="mb-3">
-        <label class="form-label" for="equipment1">Equipment (Initial Support)</label>
-        <textarea
-          class="form-control"
-          type="text"
-          id="equipment1"
-          name="campground[equipment1]"
-          required
-        >
-<%= campground.equipment1%></textarea
-        >
-        <div class="valid-feedback">Looks good!</div>
-      </div>
-
- <div class="mb-3">
-  <label for="equipment1_starty">Procurement Start (Y)</label>
-  <select name="campground[equipment1_starty]" id="equipment1_starty">
-    <option value="2024">2024</option> <option value="2025">2025</option>
-  </select>
-  <div class="valid-feedback">Looks good!</div>
-      </div>
+<label class="form-label" for="scope_detail">Works Details</label>
+<textarea
+class="form-control" type="text" id="scope_detail" name="campground[scope_detail]" required>
+<%= campground.scope_detail%></textarea>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
 <div class="mb-3">
-  <label for="equipment1_startq">Procurement Start (Q)</label>
-  <select name="campground[equipment1_startq]" id="equipment1_startq">
-    <option value="Q1">Q1</option> <option value="Q2">Q2</option>   <option value="Q3">Q3</option>  <option value="Q4">Q4</option> 
-  </select>
-  <div class="valid-feedback">Looks good!</div>
-      </div>
-
- <div class="mb-3">
-  <label for="equipment1_endy">Scheduled Delivery (Y)</label>
-  <select name="campground[equipment1_endy]" id="equipment1_endy">
-    <option value="2024">2024</option> <option value="2025">2025</option>
-  </select>
-  <div class="valid-feedback">Looks good!</div>
-      </div>
+<label for="scope_starty">Works Start (Year)</label>
+<select name="campground[scope_starty]" id="scope_starty">
+<option value="2024">2024</option> <option value="2025">2025</option>   <option value="2026">2026</option> 
+</select>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
 <div class="mb-3">
-  <label for="equipment1_endq">Scheduled Delivery (Q)</label>
-  <select name="campground[equipment1_endq]" id="equipment1_endq">
-    <option value="Q1">Q1</option> <option value="Q2">Q2</option>   <option value="Q3">Q3</option>  <option value="Q4">Q4</option> 
-  </select>
-  <div class="valid-feedback">Looks good!</div>
-      </div>
-
-
-
-
-
-
-        <div class="mb-3">
-        <label class="form-label" for="equipment2">Equipment (Follow-up Support)</label>
-        <textarea
-          class="form-control"
-          type="text"
-          id="equipment2"
-          name="campground[equipment2]"
-          required
-        >
-<%= campground.equipment2%></textarea
-        >
-        <div class="valid-feedback">Looks good!</div>
-      </div>
-
- <div class="mb-3">
-  <label for="equipment2_starty">Procurement Start (Y)</label>
-  <select name="campground[equipment2_starty]" id="equipment2_starty">
-  <option value="2026">2026</option>   <option value="2027">2027</option>   <option value="2028">2028</option> 
-  </select><%= campground.equipment2_starty%>
-  <div class="valid-feedback">Looks good!</div>
-      </div>
+<label for="scope_startq">Works Start (Quarter)</label>
+<select name="campground[scope_startq]" id="scope_startq">
+<option value="Q1">Q1</option> <option value="Q2">Q2</option>   <option value="Q3">Q3</option>  <option value="Q4">Q4</option> 
+</select>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
 <div class="mb-3">
-  <label for="equipment2_startq">Procurement Start (Q)</label>
-  <select name="campground[equipment2_startq]" id="equipment2_startq">
-    <option value="Q1">Q1</option> <option value="Q2">Q2</option>   <option value="Q3">Q3</option>  <option value="Q4">Q4</option> 
-  </select><%= campground.equipment2_startq%>
-  <div class="valid-feedback">Looks good!</div>
-      </div>
-
- <div class="mb-3">
-  <label for="equipment2_endy">Scheduled Delivery (Y)</label>
-  <select name="campground[equipment2_endy]" id="equipment2_endy">
-   <option value="2026">2026</option>   <option value="2027">2027</option>   <option value="2028">2028</option> 
-  </select><%= campground.equipment2_endy%>
-  <div class="valid-feedback">Looks good!</div>
-      </div>
+<label for="scope_endy">Works End (Year)</label>
+<select name="campground[scope_endy]" id="scope_endy">
+<option value="2026">2026</option> <option value="2027">2027</option>   <option value="2028">2028</option> 
+</select>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
 <div class="mb-3">
-  <label for="equipment2_endq">Scheduled Delivery (Q)</label>
-  <select name="campground[equipment2_endq]" id="equipment2_endq">
-    <option value="Q1">Q1</option> <option value="Q2">Q2</option>   <option value="Q3">Q3</option>  <option value="Q4">Q4</option> 
-  </select><%= campground.equipment2_endq%>
-  <div class="valid-feedback">Looks good!</div>
-      </div>
+<label for="scope_endq">Works End (Quarter)</label>
+<select name="campground[scope_endq]" id="scope_endq">
+<option value="Q1">Q1</option> <option value="Q2">Q2</option>   <option value="Q3">Q3</option>  <option value="Q4">Q4</option> 
+</select>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
+<div class="mb-3">
+<label class="form-label" for="equipment1">Equipment (Initial Support)</label>
+<textarea class="form-control" type="text" id="equipment1" name="campground[equipment1]" required>
+<%= campground.equipment1%></textarea>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
+<div class="mb-3">
+<label for="equipment1_starty">Procurement Start (Y)</label>
+<select name="campground[equipment1_starty]" id="equipment1_starty">
+<option value="2024">2024</option> <option value="2025">2025</option>
+</select>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
- <div class="mb-3">
-        <label class="form-label" for="safeguards">Safeguards</label>
-        <textarea
-          class="form-control"
-          type="text"
-          id="safeguards"
-          name="campground[safeguards]"
-          required
-        >
-<%= campground.safeguards%></textarea
-        >
-        <div class="valid-feedback">Looks good!</div>
-      </div>
+<div class="mb-3">
+<label for="equipment1_startq">Procurement Start (Q)</label>
+<select name="campground[equipment1_startq]" id="equipment1_startq">
+<option value="Q1">Q1</option> <option value="Q2">Q2</option>   <option value="Q3">Q3</option>  <option value="Q4">Q4</option> 
+</select>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
- <div class="mb-3">
-        <label class="form-label" for="gender">Gender Action</label>
-        <textarea
-          class="form-control"
-          type="text"
-          id="gender"
-          name="campground[gender]"
-          required
-        >
-<%= campground.gender%></textarea
-        >
-        <div class="valid-feedback">Looks good!</div>
-      </div>
+<div class="mb-3">
+<label for="equipment1_endy">Scheduled Delivery (Y)</label>
+<select name="campground[equipment1_endy]" id="equipment1_endy">
+<option value="2024">2024</option> <option value="2025">2025</option>
+</select>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
+<div class="mb-3">
+<label for="equipment1_endq">Scheduled Delivery (Q)</label>
+<select name="campground[equipment1_endq]" id="equipment1_endq">
+<option value="Q1">Q1</option> <option value="Q2">Q2</option>   <option value="Q3">Q3</option>  <option value="Q4">Q4</option> 
+</select>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
-      <div class="mb-3">
-        <div class="form-file custom-file">
-          <input
-            type="file"
-            class="form-file-input"
-            id="image"
-            name="image"
-            multiple
-          />
-          <label class="form-file-label" for="image">
-            <span class="form-file-text custom-file-label"
-              >Add more image(s)...</span
-            >
-            <span class="form-file-button">Browse</span>
-          </label>
-        </div>
-      </div>
+<div class="mb-3">
+<label class="form-label" for="equipment2">Equipment (Follow-up Support)</label>
+<textarea class="form-control" type="text" id="equipment2" name="campground[equipment2]"required>
+<%= campground.equipment2%></textarea>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
-      <div class="mb-3">
-        <% campground.images.forEach(function(img, i) { %>
+<div class="mb-3">
+<label for="equipment2_starty">Procurement Start (Y)</label>
+<select name="campground[equipment2_starty]" id="equipment2_starty">
+<option value="2026">2026</option>   <option value="2027">2027</option>   <option value="2028">2028</option> 
+</select><%= campground.equipment2_starty%>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
-        <img src="<%=img.thumbnail %>" class="img-thumbnail" alt="" />
-        <div class="form-check-inline">
-          <input
-            type="checkbox"
-            id="image-<%=i%>"
-            name="deleteImages[]"
-            value="<%=img.filename%>"
-          />
-        </div>
-        <label for="image-<%=i%>">Delete?</label>
-        <% })%>
-      </div>
+<div class="mb-3">
+<label for="equipment2_startq">Procurement Start (Q)</label>
+<select name="campground[equipment2_startq]" id="equipment2_startq">
+<option value="Q1">Q1</option> <option value="Q2">Q2</option>   <option value="Q3">Q3</option>  <option value="Q4">Q4</option> 
+</select><%= campground.equipment2_startq%>
+<div class="valid-feedback">Looks good!</div>
+</div>
 
-      <div class="mb-3">
-        <button class="btn btn-info">Update Site</button>
-      </div>
-    </form>
-    <a href="/campgrounds/<%= campground._id%>">Back To Campground</a>
-  </div>
+<div class="mb-3">
+<label for="equipment2_endy">Scheduled Delivery (Y)</label>
+<select name="campground[equipment2_endy]" id="equipment2_endy">
+<option value="2026">2026</option>   <option value="2027">2027</option>   <option value="2028">2028</option> 
+</select><%= campground.equipment2_endy%>
+<div class="valid-feedback">Looks good!</div>
+</div>
+
+<div class="mb-3">
+<label for="equipment2_endq">Scheduled Delivery (Q)</label>
+<select name="campground[equipment2_endq]" id="equipment2_endq">
+<option value="Q1">Q1</option> <option value="Q2">Q2</option>   <option value="Q3">Q3</option>  <option value="Q4">Q4</option> 
+</select><%= campground.equipment2_endq%>
+<div class="valid-feedback">Looks good!</div>
+</div>
+
+<div class="mb-3">
+<label class="form-label" for="safeguards">Safeguards</label>
+<textarea class="form-control" type="text" id="safeguards" name="campground[safeguards]" required>
+<%= campground.safeguards%></textarea>
+<div class="valid-feedback">Looks good!</div>
+</div>
+
+<div class="mb-3">
+<label class="form-label" for="gender">Gender Action</label>
+<textarea class="form-control" type="text" id="gender" name="campground[gender]" required>
+<%= campground.gender%></textarea>
+<div class="valid-feedback">Looks good!</div>
+</div>
+
+<div class="mb-3">
+<div class="form-file custom-file">
+<input type="file" class="form-file-input" id="image" name="image" multiple/>
+<label class="form-file-label" for="image">
+<span class="form-file-text custom-file-label"
+>Add more image(s)...</span>
+<span class="form-file-button">Browse</span>
+</label>
+</div>
+</div>
+
+<div class="mb-3">
+<% campground.images.forEach(function(img, i) { %>
+<img src="<%=img.thumbnail %>" class="img-thumbnail" alt="" />
+<div class="form-check-inline">
+<input
+type="checkbox"
+id="image-<%=i%>"
+name="deleteImages[]"
+value="<%=img.filename%>"/>
+</div>
+<label for="image-<%=i%>">Delete?</label>
+<% })%>
+</div>
+
+<div class="mb-3">
+<button class="btn btn-info">Update Site</button>
+</div>
+</form>
+<a href="/campgrounds/<%= campground._id%>">Back To Campground</a>
+</div>
 </div>
