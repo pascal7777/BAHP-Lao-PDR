@@ -28,6 +28,7 @@ module.exports.campgroundSchema = Joi.object({
   campground: Joi.object({
     title: Joi.string().required().escapeHTML(),
     location: Joi.string().required().escapeHTML(),
+        connection: Joi.string().required().escapeHTML(),
     description: Joi.string().required().escapeHTML(),
         situation: Joi.string().required().escapeHTML(),
     scope: Joi.string().escapeHTML(),
