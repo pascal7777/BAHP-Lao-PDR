@@ -1,8 +1,10 @@
 <% layout('layouts/boilerplate')%>
 <link rel="stylesheet" href="/stylesheets/stars.css" />
+
 <div class="row">
   
 <div class="col-6">
+
     <div id="campgroundCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <% campground.images.forEach((img, i) => { %>
@@ -31,12 +33,12 @@
         <span class="sr-only">Next</span>
       </a>
       <% } %>
-</div>
+   </div>
 
 <div class="card mb-3">
-<div class="card-body">
-<p class="card-text"><b>Current Situation:</b> <%= campground.situation%></p>
-</div>
+  <div class="card-body">
+  <p class="card-text"><b>Current Situation:</b> <%= campground.situation%></p>
+  </div>
    <ul class="list-group list-group-flush">
    <li class="list-group-item text-muted"><b>BHAP Scope of Work (Civil Works):</b> <%= campground.scope%> </li>
    <li class="list-group-item text-muted"><b>Works Details:</b> <%= campground.scope_detail%> </li>
@@ -48,17 +50,17 @@
    <li class="list-group-item text-muted"><b>BHAP Safeguards:</b> <%= campground.safeguards%> </li>
    <li class="list-group-item text-muted"><b>BHAP Gender Action:</b> <%= campground.gender%> </li>
    </ul>
-<% if( currentUser && campground.author.equals(currentUser._id)) {%>
-<div class="card-body">
+  <% if( currentUser && campground.author.equals(currentUser._id)) {%>
+  <div class="card-body">
         <a class="card-link btn btn-info" href="/campgrounds/<%=campground._id%>/edit">Edit</a>
         <form class="d-inline" action="/campgrounds/<%=campground._id%>?_method=DELETE" method="POST">
         <button class="btn btn-danger">Delete</button>
         </form>
-</div>
+  </div>
       <% } %>
-<div class="card-footer text-muted">
+  <div class="card-footer text-muted">
       Submitted by <%= campground.author.username%> on: <%=campground.createdAt.toDateString()%> (<%= moment(campground.createdAt).fromNow() %>)
-</div>
+  </div>
 </div>
 
 
