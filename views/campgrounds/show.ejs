@@ -34,7 +34,7 @@
 
     <div class="card mb-3">
       <div class="card-body">
-        <h5 class="card-title"><%= campground.title%></h5>
+   
         <p class="card-text"><b>Current Situation:</b> <%= campground.situation%></p>
       </div>
       <ul class="list-group list-group-flush">
@@ -83,6 +83,7 @@
 </div>
 
   <div class="col-6">
+     <h5 class="card-title"><%= campground.title%></h5>
   Location: <%= campground.location%><br>
 <span style="color:grey; font-size: 14px"><%= campground.connection%></span>
     <div id="map"></div>
