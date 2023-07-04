@@ -73,6 +73,7 @@
   </ul> 
  </div>   
 
+<div class="row">
 <div class="col-6">
  <ul class="list-group list-group-flush">
    <li class="list-group-item text-muted"><b>BHAP Safeguards:</b> <%= campground.safeguards%> </li>
@@ -88,7 +89,7 @@
   </div>
       <% } %>
  </div>
-
+</div>
  <% if(currentUser){ %>
      <br>
      <form action="/campgrounds/<%=campground._id%>/reviews" method="POST" class="mb-3 validated-form" novalidate>
@@ -128,7 +129,7 @@
 
 
   <div class="card-footer text-muted">
-      Submitted by <%= campground.author.username%> on: <%=campground.createdAt.toDateString()%> (<%= moment(campground.createdAt).fromNow() %>)
+      Created by <%= campground.author.username%> on: <%=campground.createdAt.toDateString()%> (<%= moment(campground.createdAt).fromNow() %>)
   </div>
 </div>
 </div>
