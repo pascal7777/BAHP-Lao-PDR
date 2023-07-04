@@ -53,17 +53,31 @@
   <div class="card-body">
   <p class="card-text"><b>Current Situation:</b> <%= campground.situation%></p>
   </div>
+ </div>
+
+<div class="row">
    <ul class="list-group list-group-flush">
+<div class="col-6">
    <li class="list-group-item text-muted"><b>BHAP Scope of Work (Civil Works):</b> <%= campground.scope%> </li>
    <li class="list-group-item text-muted"><b>Works Details:</b> <%= campground.scope_detail%> </li>
    <li class="list-group-item text-muted">Works Start: <%= campground.scope_starty%> <%= campground.scope_startq%>     -      Works End: <%= campground.scope_endy%> <%= campground.scope_endq%></li>
+ </ul> 
+</div>
+ <ul class="list-group list-group-flush">
+<div class="col-6">
    <li class="list-group-item text-muted"><b>BHAP Equipment Support (Initial):</b> <%= campground.equipment1%> </li>
    <li class="list-group-item text-muted">Procurement Start (initial): <%= campground.equipment1_starty%> <%= campground.equipment1_startq%>     -      Scheduled Delivery (initial): <%= campground.equipment1_endy%> <%= campground.equipment1_endq%></li>
    <li class="list-group-item text-muted"><b>BHAP Equipment Support (Follow up):</b> <%= campground.equipment2%> </li>
    <li class="list-group-item text-muted">Procurement Start (follow-up): <%= campground.equipment2_starty%> <%= campground.equipment2_startq%>     -      Scheduled Delivery (follow-up): <%= campground.equipment2_endy%> <%= campground.equipment2_endq%></li>
-   <li class="list-group-item text-muted"><b>BHAP Safeguards:</b> <%= campground.safeguards%> </li>
+ </ul> 
+</div>   
+
+<div class="col-6">
+ <ul class="list-group list-group-flush">
+<li class="list-group-item text-muted"><b>BHAP Safeguards:</b> <%= campground.safeguards%> </li>
    <li class="list-group-item text-muted"><b>BHAP Gender Action:</b> <%= campground.gender%> </li>
    </ul>
+ </div> 
   <% if( currentUser && campground.author.equals(currentUser._id)) {%>
   <div class="card-body">
         <a class="card-link btn btn-info" href="/campgrounds/<%=campground._id%>/edit">Edit</a>
@@ -72,7 +86,7 @@
         </form>
   </div>
       <% } %>
-
+ </div>
 
  <% if(currentUser){ %>
      <br>
